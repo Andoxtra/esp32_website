@@ -1,0 +1,54 @@
+:root {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --on: #22c55e;
+  --off: #475569;
+  --error: #ef4444;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.status { min-height: 1.25rem; color: var(--error); }
+
+.pin-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; }
+
+.pin-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  background: var(--card);
+  border-radius: 12px;
+}
+
+.pin-name { font-weight: 600; }
+.pin-gpio { color: var(--muted); font-size: 0.85rem; }
+
+.pin-button {
+  min-width: 90px;
+  padding: 0.6rem 1rem;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--off);
+}
+
+.pin-button.high { background: var(--on); }
+.pin-button:disabled { opacity: 0.6; cursor: wait; }
